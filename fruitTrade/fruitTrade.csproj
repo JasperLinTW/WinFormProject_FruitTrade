@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{B3A7B01F-6B9D-43E0-8471-B585A6E96468}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>fruitTrade</RootNamespace>
+    <AssemblyName>fruitTrade</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="iSpan.Utility">
+      <HintPath>..\..\..\homework\Exec3_MaintainUsers\iSpan.Utility\bin\Debug\iSpan.Utility.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CreatUserForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CreatUserForm.Designer.cs">
+      <DependentUpon>CreatUserForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ViewModels\LoginVM.cs" />
+    <Compile Include="後台\BackMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="後台\BackMainForm.Designer.cs">
+      <DependentUpon>BackMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="後台\BEditProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="後台\BEditProductForm.Designer.cs">
+      <DependentUpon>BEditProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="後台\BMembersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="後台\BMembersForm.Designer.cs">
+      <DependentUpon>BMembersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="前台\AddProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="前台\AddProductForm.Designer.cs">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="前台\CheckoutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="前台\CheckoutForm.Designer.cs">
+      <DependentUpon>CheckoutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="前台\EditShoppingCart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="前台\EditShoppingCart.Designer.cs">
+      <DependentUpon>EditShoppingCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Infra\ValidationHelper.cs" />
+    <Compile Include="Models\Services\OrderService.cs" />
+    <Compile Include="Models\Services\UserService.cs" />
+    <Compile Include="Models\ViewModels\OrderVM.cs" />
+    <Compile Include="Models\ViewModels\ProductIndexVM.cs" />
+    <Compile Include="Models\Services\ProductsService.cs" />
+    <Compile Include="Models\ViewModels\UserIndexVM.cs" />
+    <Compile Include="前台\OrderDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="前台\OrderDetailForm.Designer.cs">
+      <DependentUpon>OrderDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="前台\OrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="前台\OrdersForm.Designer.cs">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="前台\ProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="前台\ProductsForm.Designer.cs">
+      <DependentUpon>ProductsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="後台\BOrderDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="後台\BOrderDetailForm.Designer.cs">
+      <DependentUpon>BOrderDetailForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="後台\BOrdersForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="後台\BOrdersForm.Designer.cs">
+      <DependentUpon>BOrdersForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="後台\BProductsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="後台\BProductsForm.Designer.cs">
+      <DependentUpon>BProductsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="後台\CreatProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="後台\CreatProductForm.Designer.cs">
+      <DependentUpon>CreatProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="後台\EditMemberForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="後台\EditMemberForm.Designer.cs">
+      <DependentUpon>EditMemberForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CreatUserForm.resx">
+      <DependentUpon>CreatUserForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="前台\AddProductForm.resx">
+      <DependentUpon>AddProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="前台\CheckoutForm.resx">
+      <DependentUpon>CheckoutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="前台\EditShoppingCart.resx">
+      <DependentUpon>EditShoppingCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="前台\OrderDetailForm.resx">
+      <DependentUpon>OrderDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="前台\OrdersForm.resx">
+      <DependentUpon>OrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="前台\ProductsForm.resx">
+      <DependentUpon>ProductsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="後台\BackMainForm.resx">
+      <DependentUpon>BackMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="後台\BEditProductForm.resx">
+      <DependentUpon>BEditProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="後台\BMembersForm.resx">
+      <DependentUpon>BMembersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="後台\BOrderDetailForm.resx">
+      <DependentUpon>BOrderDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="後台\BOrdersForm.resx">
+      <DependentUpon>BOrdersForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="後台\BProductsForm.resx">
+      <DependentUpon>BProductsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="後台\CreatProductForm.resx">
+      <DependentUpon>CreatProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="後台\EditMemberForm.resx">
+      <DependentUpon>EditMemberForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\fruitTrade.Models.ProductIndexVM.datasource" />
+    <None Include="Properties\DataSources\fruitTrade.Models.ShoppingCartVM.datasource" />
+    <None Include="Properties\DataSources\fruitTrade.Models.ViewModels.MemberIndexVM.datasource" />
+    <None Include="Properties\DataSources\fruitTrade.Models.ViewModels.OrderVM.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Infra\Extension\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
