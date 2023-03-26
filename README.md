@@ -6,5 +6,5 @@
 1. 使用.NET Windows Forms開發。
 2. 以ADO.NET技術對MS SQL資料庫進行增刪查改。
 ## 專案特點
-使用動態連結程式庫 (DLL) 封裝模組化的ADO.NET語法
+使用動態連結程式庫 (DLL) 封裝模組化的ADO.NET語法(iSpan Utility)
 
